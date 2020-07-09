@@ -1,0 +1,274 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: #282a36;
+  background-image: url("../assets/stars.svg");
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  padding: 32px;
+  border-bottom: 1px solid #333;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+header div {
+  text-align: center;
+}
+
+header div a {
+  color: aliceblue;
+  font-size: 20px;
+  text-decoration: none;
+  line-height: 30px;
+  margin: 0 16px;
+  transition: 200;
+  margin-right: -1px;
+}
+
+header div a:hover {
+  color: rgb(255, 123, 0);
+  transition: color 200ms;
+  box-shadow: 1px 1px rgb(255, 123, 0), 2px 2px rgb(255, 123, 0),
+    3px 3px rgb(255, 123, 0);
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+
+#wrapper {
+  padding-top: 30px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: aliceblue;
+}
+
+#wrapper img {
+  width: 250px;
+  border: 3px solid rgb(255, 123, 0);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+#wrapper h1 {
+  padding-bottom: 25px;
+}
+
+#wrapper h1 a {
+  text-decoration: none;
+  color: aliceblue;
+  transition: 200ms;
+  padding-bottom: 5px;
+}
+
+#wrapper .info {
+  display: flex;
+  justify-content: center;
+}
+
+#wrapper .info a {
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: aliceblue;
+  transition: 0.5ms;
+}
+
+#wrapper .info a:hover {
+  color: rgb(255, 123, 0);
+}
+
+#wrapper h1 a:hover {
+  color: rgb(255, 123, 0);
+}
+
+#wrapper .info a img {
+  border: 0px;
+  width: 50px;
+  padding-top: 20px;
+  margin: 0px 12px;
+}
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card-aulas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+.card__image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card__image-container:hover {
+  border: 2px solid rgb(136, 255, 0);
+  border-radius: 10px;
+}
+
+.card-content,
+.card-info {
+  padding: 20px;
+  background-color: rgb(255, 123, 0);
+}
+
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-price {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#projects {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+
+.cards__container {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 42px auto;
+  gap: 80px;
+}
+
+.card {
+  width: 100%;
+  background-color: #000000;
+  background-image: url(./assets/stars.svg);
+  padding: 50px 30px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card_number {
+  margin-bottom: 60px;
+  padding: 12px 20px;
+}
+#starter .card_number {
+  color: #7159c1;
+  border: 3px solid #7159c1;
+  border-radius: 100%;
+}
+#launchbase .card_number {
+  color: #fd951f;
+  border: 3px solid #fd951f;
+  border-radius: 100%;
+}
+#gostack .card_number {
+  color: #04d361;
+  border: 3px solid #04d361;
+  border-radius: 100%;
+}
+
+#starter .card__content span {
+  color: #7159c1;
+  font-weight: 600;
+}
+#launchbase .card__content span {
+  color: #fd951f;
+  font-weight: 600;
+}
+#gostack .card__content span {
+  color: #04d361;
+  font-weight: 600;
+}
+#starter:hover {
+  border: 3px solid #7159c1;
+}
+
+#launchbase:hover {
+  border: 3px solid #fd951f;
+}
+
+#gostack:hover {
+  border: 3px solid #04d361;
+}
+.card__content {
+  margin: 28px 0;
+  text-align: center;
+}
+.card__info {
+  margin-top: 24px;
+}
+
+.card__info .price {
+  background-color: #282a36;
+  padding: 8px 30px;
+  border-radius: 50px;
+}
+
+/*************** MODAL **********/
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.836);
+  width: 100%;
+  height: 100%;
+  transition: step-start 200ms;
+
+  position: fixed;
+  top: 0;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  width: 75%;
+  height: 90%;
+  margin: 5vh auto;
+  position: relative;
+}
+.modal .maximize-modal,
+.modal .close-modal {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 4px;
+  right: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal .maximize-modal {
+  right: 68px;
+}
+
+iframe {
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  background-color: #fff;
+  border: 1px solid #282a36;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*********** FOOTER ***********/
+
